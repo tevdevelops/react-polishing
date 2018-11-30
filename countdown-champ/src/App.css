@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  font-size: 35px;
+  margin-top: 15%;
+}
+.App-title {
+  font-size: 50px;
+}
+.hours, .minutes, .days, .seconds {
+  display: inline;
+  margin: 0px 10px;
+}
+.daedline-input {
+  font-size: 25px;
+  margin: 5px;
+}
