@@ -42,7 +42,8 @@ class App extends Component {
   constructor(props) {
     super();
     this.state = {
-      serverData: {}
+      serverData: {},
+      filterString: ''
     }
   }
 
@@ -50,7 +51,6 @@ class App extends Component {
     setTimeout(() => {
       this.setState({serverData: fakeServerData});
     }, 1000);
-
   }
 
   render() {
@@ -61,8 +61,10 @@ class App extends Component {
             <h1>{this.state.serverData.user.name}'s Playlists</h1>
             <PlaylistCounter playlists={this.state.serverData.user.playlists}/>
             <HoursCounter playlists={this.state.serverData.user.playlists}/>
-            <Filter/>
-            {this.state.serverData.user.playlists.map(playlist =>
+            <Filter onTextChange={text => this.setState({filterString: text})}/>
+            {this.state.serverData.user.playlists.filter(playlist =>
+              playlist.name.toLowerCase().includes(this.state.filterString.toLowerCase())
+            ).map(playlist =>
               <Playlist playlist={playlist}/>
             )}
           </div> : <h1>Loading...</h1>
