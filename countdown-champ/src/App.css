@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   font-size: 35px;
-  margin-top: 15%;
+  height: 100vh;
 }
 .App-title {
   font-size: 50px;
@@ -13,4 +13,7 @@
 .daedline-input {
   font-size: 25px;
   margin: 5px;
+}
+.christmas {
+  background-color: green;
 }

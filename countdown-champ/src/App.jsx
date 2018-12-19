@@ -9,7 +9,8 @@ class App extends Component {
 
     this.state = {
       deadline: 'December 25, 2018',
-      newDeadline: ''
+      newDeadline: '',
+      appClass: 'App christmas'
     }
   }
 
@@ -17,11 +18,17 @@ class App extends Component {
     this.setState({
       deadline: this.state.newDeadline
     })
+    if(this.state.deadline === 'December 25, 2018') {
+      this.setState({appClass: 'App christmas'});
+    }
+    else {
+      this.setState({appClass: 'App'});
+    }
   }
 
   render() {
     return(
-      <div className='App'>
+      <div className={this.state.appClass}>
         <div className='App-title'>Countdown to {this.state.deadline}</div>
         <Clock
           deadline={this.state.deadline}
