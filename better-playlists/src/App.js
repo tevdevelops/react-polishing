@@ -99,7 +99,11 @@ class App extends Component {
                 <Playlist playlist={playlist} imageUrl={playlist.imageUrl}/>
               )}
           </div> : <button
-                      onClick={() => window.location = 'http://localhost:8888/login'}
+                      onClick={() => {
+                        window.location = window.location.href.includes('localhost')
+                        ?  'http://localhost:8888/login'
+                        : 'https://better-playlists-backend-tev.herokuapp.com/login'}
+                      }
                       style={{padding: '20px', fontSize: '32px', marginTop: '20px'}}
                     >
                       Sign In with Spotfiy
