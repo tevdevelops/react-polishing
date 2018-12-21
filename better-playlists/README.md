@@ -1,3 +1,9 @@
+#Spotify Playlist Search Web App
+
+This app is a simple react app that authenticates a user via Spotify. It then grabs the user's playlists and list them and three tracks from each one. You can search through playlist names or song titles.
+
+### [Demo](https://better-playlists-tevdevelops.herokuapp.com)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
