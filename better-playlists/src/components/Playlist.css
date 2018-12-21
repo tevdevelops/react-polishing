@@ -7,7 +7,9 @@ li {
 }
 .playlist {
   display: inline-block;
-  margin: auto 20px;;
+  margin-bottom: 50px;
+  width: 25%;
+  max-width: 25%
 }
 img {
   width: 160px;
